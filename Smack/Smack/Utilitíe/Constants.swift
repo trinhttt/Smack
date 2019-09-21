@@ -8,6 +8,7 @@
 
 import Foundation
 
-public class Constants {
-    static let TO_LOGIN = "toLogin"
+class Constants {
+    let TO_LOGIN = "toLogin"
+    let TO_CREATE_ACCOUNT = "toCreateAccount"
 }
