@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class AuthService {
     
@@ -51,9 +52,7 @@ class AuthService {
         
         let HTTPMethod: HTTPMethod = .post
         
-        let header = [
-            "Content-Type" : "application/json; charset=utf-8"
-        ]
+        let header = HEADER
         
         let body: [String: Any] = [
             "email" : lowerCaseEmail,
@@ -66,6 +65,69 @@ class AuthService {
             } else {
                 completion(false)
                 debugPrint(response.result.error as Any)
+            }
+        }
+    }
+    
+    func loginUser(email: String, password: String, completion: @escaping completionHandler) {
+        
+        let lowerCaseEmail = email.lowercased()
+        
+        let body = [
+            "email" : lowerCaseEmail,
+            "password" : password
+        ]
+        Alamofire.request(URL_LOGIN, method: .post, parameters: body, encoding: JSONEncoding.default, headers: HEADER).responseJSON { (response) in
+            
+            /// C1: json = response.result.value
+//            if response.result.error == nil {
+//                if let json = response.result.value as? Dictionary<String, Any> {
+//                    if let email = json["user"] as? String {
+//                        self.userEmail = email
+//                    }
+//                    if let token = json["token"] as? String {
+//                        self.authToken = token
+//                    }
+//                    self.isLoggedIn = true
+//                    completion(true)
+//                } else {
+//                    completion(false)
+//                    debugPrint(response.result.error as Any)
+//                }
+//            } else {
+//                completion(false)
+//            }
+            
+            /// C2: data = response.data
+            if response.result.error == nil {
+                if let data = response.data{
+                    if let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? Dictionary<String, Any>, let email = json["user"] as? String, let token = json["token"] as? String{
+                        self.userEmail = email
+                        self.authToken = token
+                    }
+                }
+                self.isLoggedIn = true
+                completion(true)
+            } else {
+                completion(false)
+            }
+            
+            /// C3: Use SwiftyJSON
+            if response.result.error == nil {
+                if let data = response.data {
+                    do {
+                        let json = try JSON(data:data)
+                        self.userEmail = json["user"].stringValue
+                        self.authToken = json["token"].stringValue
+                    } catch {
+                        print(error)
+                    }
+                }
+                self.isLoggedIn = true
+                completion(true)
+
+            } else {
+                completion(false)
             }
         }
     }
