@@ -19,7 +19,7 @@ class ChannelVC: UIViewController {
     
     
     @IBAction func ibLoginButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: Constants().TO_LOGIN , sender: nil)
+        performSegue(withIdentifier: TO_LOGIN , sender: nil)
     }
     
     @IBAction func prepareForUnwind(sugue: UIStoryboardSegue){}

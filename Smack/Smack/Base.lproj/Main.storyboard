@@ -47,7 +47,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVA-KN-DZN">
-                                        <rect key="frame" x="12" y="35" width="40" height="30"/>
+                                        <rect key="frame" x="12" y="35" width="16" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="5ac-2M-bCD"/>
                                         </constraints>
@@ -101,7 +101,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsR-ET-wBm">
-                                <rect key="frame" x="317" y="105.5" width="22" height="22"/>
+                                <rect key="frame" x="323" y="105.5" width="16" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
                                 <connections>
                                     <segue destination="xv8-OV-Vn6" kind="show" identifier="toLogin" id="PWd-04-1Rh"/>

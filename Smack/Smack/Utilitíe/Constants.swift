@@ -8,7 +8,22 @@
 
 import Foundation
 
-class Constants {
-    let TO_LOGIN = "toLogin"
-    let TO_CREATE_ACCOUNT = "toCreateAccount"
-}
+
+typealias completionHandler = (_ Success: Bool) -> ()
+
+// URL Constants
+let URL_BASE = "https://smackchatapp02.herokuapp.com/v1/"
+let URL_REGISTER = "\(URL_BASE)account/register"
+
+// Segues
+let TO_LOGIN = "toLogin"
+let TO_CREATE_ACCOUNT = "toCreateAccount"
+
+// User Defaults
+let TOKEN_KEY = "token"
+let LOGGED_IN_KEY = "loggedIn"
+let USER_EMAIL = "userEmail"
+
+
+
+

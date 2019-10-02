@@ -20,7 +20,7 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func ibCreateAccountPressed(_ sender: Any) {
-        performSegue(withIdentifier: Constants().TO_CREATE_ACCOUNT, sender: nil)
+        performSegue(withIdentifier: TO_CREATE_ACCOUNT, sender: nil)
     }
     
 }
