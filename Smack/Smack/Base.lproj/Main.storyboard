@@ -47,7 +47,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVA-KN-DZN">
-                                        <rect key="frame" x="12" y="35" width="16" height="30"/>
+                                        <rect key="frame" x="12" y="35" width="40" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="5ac-2M-bCD"/>
                                         </constraints>
@@ -101,7 +101,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bsR-ET-wBm">
-                                <rect key="frame" x="323" y="105.5" width="16" height="22"/>
+                                <rect key="frame" x="317" y="105.5" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
                                 <connections>
                                     <segue destination="xv8-OV-Vn6" kind="show" identifier="toLogin" id="PWd-04-1Rh"/>
@@ -220,7 +220,7 @@
                                     <action selector="ibClosePressed:" destination="xv8-OV-Vn6" eventType="touchUpInside" id="WQw-8E-qPQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pe1-GP-NSq">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pe1-GP-NSq" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="40" y="340" width="334" height="44"/>
                                 <color key="backgroundColor" red="0.1667533517" green="0.72160744669999999" blue="0.96316140890000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -229,6 +229,11 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Yb5-zi-fTG">
                                 <rect key="frame" x="40" y="224" width="334" height="96"/>
@@ -318,16 +323,16 @@
             </objects>
             <point key="canvasLocation" x="1831.8840579710147" y="-161.38392857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Create AccountVC-->
         <scene sceneID="dkH-el-osj">
             <objects>
-                <viewController id="ICs-Et-eXB" sceneMemberID="viewController">
+                <viewController id="ICs-Et-eXB" customClass="CreateAccountVC" customModule="Smack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6zC-dt-iiD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCp-uX-dse">
-                                <rect key="frame" x="179" y="144" width="56" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zCp-uX-dse">
+                                <rect key="frame" x="132.5" y="144" width="149" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.1667533517" green="0.72160744669999999" blue="0.96316140890000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -341,17 +346,21 @@
                                 <state key="normal" image="closeButton"/>
                                 <connections>
                                     <action selector="ibClosePressed:" destination="xv8-OV-Vn6" eventType="touchUpInside" id="6WZ-UW-WNe"/>
+                                    <segue destination="F7x-lD-GZp" kind="unwind" unwindAction="prepareForUnwindWithSugue:" id="GV0-Wb-mtw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDs-uz-aOo">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDs-uz-aOo" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="60" y="773" width="294" height="44"/>
                                 <color key="backgroundColor" red="0.1667533517" green="0.72160744669999999" blue="0.96316140890000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="5L7-7e-M7G"/>
                                 </constraints>
-                                <state key="normal" title="Login">
+                                <state key="normal" title="Create Account">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="ibCreateAccountTapped:" destination="ICs-Et-eXB" eventType="touchUpInside" id="xUU-j1-gfR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqu-fk-mrP">
                                 <rect key="frame" x="108" y="642.5" width="198" height="32"/>
@@ -359,6 +368,9 @@
                                 <state key="normal" title="Generate background color">
                                     <color key="titleColor" red="0.1667533517" green="0.72160744669999999" blue="0.96316140890000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="ibPickBGColorTapped:" destination="ICs-Et-eXB" eventType="touchUpInside" id="QfU-i6-zYS"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="3gG-is-Z7N">
                                 <rect key="frame" x="40" y="224.5" width="334" height="146"/>
@@ -389,7 +401,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YPn-C2-1mR">
-                                        <rect key="frame" x="20" y="94" width="294" height="2"/>
+                                        <rect key="frame" x="0.0" y="94" width="334" height="2"/>
                                         <color key="backgroundColor" red="0.1667533517" green="0.5287296642" blue="0.96316140890000002" alpha="0.74488976880000002" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="2" id="jkG-ss-jpV"/>
@@ -416,11 +428,13 @@
                                     <constraint firstItem="d0g-9h-hck" firstAttribute="leading" secondItem="3gG-is-Z7N" secondAttribute="leading" id="728-Mb-PCz"/>
                                     <constraint firstAttribute="trailing" secondItem="x0c-ud-aES" secondAttribute="trailing" id="CSU-gp-HrL"/>
                                     <constraint firstItem="Hu3-eN-z9Z" firstAttribute="width" secondItem="pUJ-5l-7Bf" secondAttribute="width" id="EZw-Z5-mD1"/>
+                                    <constraint firstItem="YPn-C2-1mR" firstAttribute="leading" secondItem="Hu3-eN-z9Z" secondAttribute="leading" id="GzA-5n-ugi"/>
                                     <constraint firstItem="pUJ-5l-7Bf" firstAttribute="leading" secondItem="3gG-is-Z7N" secondAttribute="leading" id="Mcw-lr-HYU"/>
                                     <constraint firstItem="qWw-SI-L9w" firstAttribute="leading" secondItem="3gG-is-Z7N" secondAttribute="leading" id="Nh7-Ec-qz7"/>
                                     <constraint firstItem="x0c-ud-aES" firstAttribute="leading" secondItem="3gG-is-Z7N" secondAttribute="leading" id="PUl-rD-Z89"/>
                                     <constraint firstAttribute="trailing" secondItem="d0g-9h-hck" secondAttribute="trailing" id="bbv-Hc-vwG"/>
                                     <constraint firstAttribute="trailing" secondItem="pUJ-5l-7Bf" secondAttribute="trailing" id="cHS-rf-YQ2"/>
+                                    <constraint firstItem="YPn-C2-1mR" firstAttribute="trailing" secondItem="Hu3-eN-z9Z" secondAttribute="trailing" id="it9-lb-cYY"/>
                                     <constraint firstAttribute="trailing" secondItem="qWw-SI-L9w" secondAttribute="trailing" id="jfr-uB-7OL"/>
                                 </constraints>
                             </stackView>
@@ -437,6 +451,9 @@
                                 <state key="normal" title="Choose avatar">
                                     <color key="titleColor" red="0.1667533517" green="0.72160744669999999" blue="0.96316140890000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="ibPickAvatarTapped:" destination="ICs-Et-eXB" eventType="touchUpInside" id="omG-VC-3Ve"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -463,6 +480,10 @@
                         <viewLayoutGuide key="safeArea" id="x1c-a2-Sz4"/>
                     </view>
                     <connections>
+                        <outlet property="ibAvatarImg" destination="aie-rN-fqT" id="IGe-XV-r74"/>
+                        <outlet property="ibEmailTxt" destination="Hu3-eN-z9Z" id="06b-yE-Rru"/>
+                        <outlet property="ibPasswordTxt" destination="d0g-9h-hck" id="6ks-Va-aeY"/>
+                        <outlet property="ibUsernameTxt" destination="x0c-ud-aES" id="eIh-NN-kNu"/>
                         <segue destination="F7x-lD-GZp" kind="unwind" unwindAction="prepareForUnwindWithSugue:" id="2DH-i0-R63"/>
                     </connections>
                 </viewController>
