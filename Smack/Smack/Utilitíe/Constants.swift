@@ -15,9 +15,12 @@ typealias completionHandler = (_ Success: Bool) -> ()
 let URL_BASE = "https://smackchatapp02.herokuapp.com/v1/"
 let URL_REGISTER = "\(URL_BASE)account/register"
 let URL_LOGIN = "\(URL_BASE)account/login"
+let URL_USER_ADD = "\(URL_BASE)user/add"
+
 // Segues
 let TO_LOGIN = "toLogin"
 let TO_CREATE_ACCOUNT = "toCreateAccount"
+let UNWIND = "unwind"
 
 // User Defaults
 let TOKEN_KEY = "token"

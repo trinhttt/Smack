@@ -346,7 +346,7 @@
                                 <state key="normal" image="closeButton"/>
                                 <connections>
                                     <action selector="ibClosePressed:" destination="xv8-OV-Vn6" eventType="touchUpInside" id="6WZ-UW-WNe"/>
-                                    <segue destination="F7x-lD-GZp" kind="unwind" unwindAction="prepareForUnwindWithSugue:" id="GV0-Wb-mtw"/>
+                                    <action selector="ibCloseTapped:" destination="ICs-Et-eXB" eventType="touchUpInside" id="ymG-Qk-jYG"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDs-uz-aOo" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
@@ -484,7 +484,7 @@
                         <outlet property="ibEmailTxt" destination="Hu3-eN-z9Z" id="06b-yE-Rru"/>
                         <outlet property="ibPasswordTxt" destination="d0g-9h-hck" id="6ks-Va-aeY"/>
                         <outlet property="ibUsernameTxt" destination="x0c-ud-aES" id="eIh-NN-kNu"/>
-                        <segue destination="F7x-lD-GZp" kind="unwind" unwindAction="prepareForUnwindWithSugue:" id="2DH-i0-R63"/>
+                        <segue destination="F7x-lD-GZp" kind="unwind" identifier="unwind" unwindAction="prepareForUnwindWithSugue:" id="2DH-i0-R63"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wkm-bb-qaw" userLabel="First Responder" sceneMemberID="firstResponder"/>
