@@ -33,4 +33,7 @@ let HEADER = [
     "Content-Type" : "application/json; charset=utf-8"
 ]
 
+//Colors
+let smackBluePlaceholder = #colorLiteral(red: 0.2, green: 0.7019607843, blue: 0.9843137255, alpha: 1)
+
 

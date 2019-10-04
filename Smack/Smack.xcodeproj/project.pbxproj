@@ -18,6 +18,8 @@
 		0ED3556923459C7D00D466DF /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED3556823459C7D00D466DF /* UserDataService.swift */; };
 		0ED3556B2345F4C500D466DF /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED3556A2345F4C500D466DF /* AvatarPickerVC.swift */; };
 		0ED3556D2345FD8C00D466DF /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED3556C2345FD8C00D466DF /* AvatarCell.swift */; };
+		0ED3556F23472D1700D466DF /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED3556E23472D1700D466DF /* CircleImage.swift */; };
+		0ED355712347417D00D466DF /* ColorPlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED355702347417D00D466DF /* ColorPlaceholderTextField.swift */; };
 		0EF4FAF4232D460B00BEE032 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF4FAF3232D460B00BEE032 /* AppDelegate.swift */; };
 		0EF4FAF9232D460B00BEE032 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EF4FAF7232D460B00BEE032 /* Main.storyboard */; };
 		0EF4FAFB232D460C00BEE032 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EF4FAFA232D460C00BEE032 /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 		0ED3556823459C7D00D466DF /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		0ED3556A2345F4C500D466DF /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		0ED3556C2345FD8C00D466DF /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
+		0ED3556E23472D1700D466DF /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		0ED355702347417D00D466DF /* ColorPlaceholderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPlaceholderTextField.swift; sourceTree = "<group>"; };
 		0EF4FAF0232D460B00BEE032 /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EF4FAF3232D460B00BEE032 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EF4FAF8232D460B00BEE032 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 				0EFD3B2C232F8AE4002A0C64 /* GradientView.swift */,
 				0ED3556623445DC500D466DF /* RoundedButton.swift */,
 				0ED3556C2345FD8C00D466DF /* AvatarCell.swift */,
+				0ED3556E23472D1700D466DF /* CircleImage.swift */,
+				0ED355702347417D00D466DF /* ColorPlaceholderTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -296,7 +302,9 @@
 				0E119F15232E990500510F9B /* ChannelVC.swift in Sources */,
 				0ED3556B2345F4C500D466DF /* AvatarPickerVC.swift in Sources */,
 				0ED3556723445DC500D466DF /* RoundedButton.swift in Sources */,
+				0ED3556F23472D1700D466DF /* CircleImage.swift in Sources */,
 				0E119F13232E98F400510F9B /* ChatVC.swift in Sources */,
+				0ED355712347417D00D466DF /* ColorPlaceholderTextField.swift in Sources */,
 				0ED3556923459C7D00D466DF /* UserDataService.swift in Sources */,
 				0E2D1AC62335D79800DF82C2 /* CreateAccountVC.swift in Sources */,
 				0ED3556523439D3200D466DF /* AuthService.swift in Sources */,
