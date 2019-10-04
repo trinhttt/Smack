@@ -129,6 +129,8 @@ class AuthService {
             } else {
                 completion(false)
             }
+            
+            ///C4: Codable
         }
     }
     
