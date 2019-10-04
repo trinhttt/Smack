@@ -14,7 +14,7 @@ class ChannelVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.revealViewController()?.rearViewRevealWidth = self.view.frame.width - 60
-       
+        NotificationCenter.default.addObserver(self, selector: #selector(userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
     }
     
     
@@ -24,5 +24,8 @@ class ChannelVC: UIViewController {
     
     @IBAction func prepareForUnwind(sugue: UIStoryboardSegue){}
     
+    @objc func userDataDidChange(_ notif: Notification) {
+        
+    }
 
 }
