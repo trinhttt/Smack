@@ -40,7 +40,7 @@ class CreateAccountVC: UIViewController {
         if UserDataService.instance.avatarName != "" {
             avatarName = UserDataService.instance.avatarName
             ibAvatarImg.image = UIImage(named: avatarName)
-            if avatarName.contains("light") && bgColor != nil{
+            if avatarName.contains("light") && bgColor == nil{
                 ibAvatarImg.backgroundColor = .lightGray
             }
         }
@@ -100,6 +100,7 @@ class CreateAccountVC: UIViewController {
         let green = CGFloat.random(in: 0.0...1.0)
         let blue = CGFloat.random(in: 0.0...1.0)
         bgColor = UIColor(red: red, green: green, blue: blue, alpha: 1)
+        avatarColor = "[\(red),\(green),\(blue),1]"
         UIView.animate(withDuration: 0.2) {
             self.ibAvatarImg.backgroundColor = self.bgColor
         }
@@ -111,8 +112,9 @@ class CreateAccountVC: UIViewController {
     
     func setupView() {
         ibSpinner.isHidden = true
-        let tap = UIGestureRecognizer(target: self, action: #selector(handleTap))
-        view.addGestureRecognizer(tap)
+//        let tap = UIGestureRecognizer(target: self, action: #selector(handleTap))
+//        tap.cancelsTouchesInView = false
+//        view.addGestureRecognizer(tap)
     }
     
     @objc func handleTap() {

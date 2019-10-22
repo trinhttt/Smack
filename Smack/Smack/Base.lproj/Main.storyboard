@@ -180,6 +180,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="ibAvatarImg" destination="uHT-eD-a5R" id="yKw-MB-JS1"/>
                         <outlet property="ibLoginButton" destination="f06-AC-nhM" id="Hly-Bp-c4J"/>
                     </connections>
                 </viewController>
@@ -229,11 +230,6 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Yb5-zi-fTG">
                                 <rect key="frame" x="40" y="224" width="334" height="96"/>
@@ -452,7 +448,7 @@
                                     <color key="titleColor" red="0.1667533517" green="0.72160744669999999" blue="0.96316140890000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="ibPickAvatarTapped:" destination="ICs-Et-eXB" eventType="touchUpInside" id="omG-VC-3Ve"/>
+                                    <action selector="ibPickAvatarTapped:" destination="ICs-Et-eXB" eventType="touchUpInside" id="LvV-9E-5Ks"/>
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="oxH-vD-L8e">

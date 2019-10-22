@@ -11,6 +11,8 @@ import UIKit
 class ChannelVC: UIViewController {
 
     @IBOutlet weak var ibLoginButton: UIButton!
+    @IBOutlet weak var ibAvatarImg: CircleImage!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.revealViewController()?.rearViewRevealWidth = self.view.frame.width - 60
@@ -25,7 +27,17 @@ class ChannelVC: UIViewController {
     @IBAction func prepareForUnwind(sugue: UIStoryboardSegue){}
     
     @objc func userDataDidChange(_ notif: Notification) {
-        
+       // print(notif.userInfo)
+        if AuthService.instance.isLoggedIn {
+            ibLoginButton.setTitle(UserDataService.instance.name, for: .normal)
+            ibAvatarImg.image = UIImage(named: UserDataService.instance.avatarName)
+            ibAvatarImg.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)
+            
+        } else {
+            ibLoginButton.setTitle("Login", for: .normal)
+            ibAvatarImg.image = UIImage(named: "menuProfileIcon")
+            ibAvatarImg.backgroundColor = .clear
+        }
     }
 
 }
