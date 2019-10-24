@@ -17,6 +17,8 @@ let URL_REGISTER = "\(URL_BASE)account/register"
 let URL_LOGIN = "\(URL_BASE)account/login"
 let URL_USER_ADD = "\(URL_BASE)user/add"
 let URL_FIND_USER_BY_EMAIL = "\(URL_BASE)user/byEmail/"
+let URL_GET_CHANNELS = "\(URL_BASE)channel/"
+
 // Segues
 let TO_LOGIN = "toLogin"
 let TO_CREATE_ACCOUNT = "toCreateAccount"
