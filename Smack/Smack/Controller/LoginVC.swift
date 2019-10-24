@@ -10,9 +10,13 @@ import UIKit
 
 class LoginVC: UIViewController {
 
+    @IBOutlet weak var ibUsername: ColorPlaceholderTextField!
+    @IBOutlet weak var ibPassword: ColorPlaceholderTextField!
+    @IBOutlet weak var ibSpinner: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupView()
         // Do any additional setup after loading the view.
     }
     @IBAction func ibClosePressed(_ sender: Any) {
@@ -23,4 +27,29 @@ class LoginVC: UIViewController {
         performSegue(withIdentifier: TO_CREATE_ACCOUNT, sender: nil)
     }
     
+    @IBAction func ibLoginTapped(_ sender: Any) {
+        ibSpinner.isHidden = false
+        ibSpinner.startAnimating()
+        guard let email = ibUsername.text, let password = ibPassword.text else {
+            return
+        }
+        
+        AuthService.instance.loginUser(email: email, password: password) { (success) in
+            if success {
+                AuthService.instance.findUserByEmail(completion: { (findSuccess) in
+                    if findSuccess{
+                        NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+                        self.ibSpinner.isHidden = true
+                        self.ibSpinner.stopAnimating()
+                        self.dismiss(animated: true, completion: nil)
+                        
+                    }
+                })
+            }
+        }
+    }
+    
+    func setupView() {
+        ibSpinner.isHidden = true
+    }
 }

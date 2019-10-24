@@ -17,6 +17,7 @@ class ChannelVC: UIViewController {
         super.viewDidLoad()
         self.revealViewController()?.rearViewRevealWidth = self.view.frame.width - 60
         NotificationCenter.default.addObserver(self, selector: #selector(userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+        setupUserInfo()
     }
     
     
@@ -34,6 +35,10 @@ class ChannelVC: UIViewController {
     
     @objc func userDataDidChange(_ notif: Notification) {
        // print(notif.userInfo)
+       setupUserInfo()
+    }
+    
+    func setupUserInfo() {
         if AuthService.instance.isLoggedIn {
             ibLoginButton.setTitle(UserDataService.instance.name, for: .normal)
             ibAvatarImg.image = UIImage(named: UserDataService.instance.avatarName)

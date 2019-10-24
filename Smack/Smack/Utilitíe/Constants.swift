@@ -16,7 +16,7 @@ let URL_BASE = "https://smackchatapp02.herokuapp.com/v1/"
 let URL_REGISTER = "\(URL_BASE)account/register"
 let URL_LOGIN = "\(URL_BASE)account/login"
 let URL_USER_ADD = "\(URL_BASE)user/add"
-
+let URL_FIND_USER_BY_EMAIL = "\(URL_BASE)user/byEmail/"
 // Segues
 let TO_LOGIN = "toLogin"
 let TO_CREATE_ACCOUNT = "toCreateAccount"
@@ -31,6 +31,11 @@ let USER_EMAIL = "userEmail"
 // Headers
 let HEADER = [
     "Content-Type" : "application/json; charset=utf-8"
+]
+
+let BEARER_HEADER = [
+    "Content-Type" : "application/json; charset=utf-8",
+    "Authorization" : "Bearer \(AuthService.instance.authToken)"
 ]
 
 //Colors
