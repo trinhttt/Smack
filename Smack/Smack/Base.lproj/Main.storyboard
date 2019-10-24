@@ -118,7 +118,7 @@
                                 <rect key="frame" x="0.0" y="147" width="414" height="600"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="6TJ-2M-aCp">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChannelCell" id="6TJ-2M-aCp" customClass="ChannelCell" customModule="Smack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6TJ-2M-aCp" id="mbS-iY-vnZ">
@@ -138,6 +138,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="ibChannelName" destination="ps6-tv-9nc" id="OKU-Lz-pej"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -182,6 +185,7 @@
                     <connections>
                         <outlet property="ibAvatarImg" destination="uHT-eD-a5R" id="yKw-MB-JS1"/>
                         <outlet property="ibLoginButton" destination="f06-AC-nhM" id="Hly-Bp-c4J"/>
+                        <outlet property="ibTableView" destination="L6x-hv-zgj" id="6HN-BK-KV4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IhZ-Vd-aAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
