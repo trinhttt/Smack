@@ -53,6 +53,13 @@ class ChannelVC: UIViewController {
             ibAvatarImg.backgroundColor = .clear
         }
     }
+    
+    @IBAction func ibAddChannelTapped(_ sender: Any) {
+        let vc = AddChannelVC()
+        vc.modalPresentationStyle = .custom
+        present(vc, animated: true)
+    }
+    
 
 }
 

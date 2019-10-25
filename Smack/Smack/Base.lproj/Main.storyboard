@@ -104,6 +104,7 @@
                                 <rect key="frame" x="317" y="105.5" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
                                 <connections>
+                                    <action selector="ibAddChannelTapped:" destination="uyC-XY-EgG" eventType="touchUpInside" id="MQu-1M-mTR"/>
                                     <segue destination="xv8-OV-Vn6" kind="show" identifier="toLogin" id="PWd-04-1Rh"/>
                                 </connections>
                             </button>
