@@ -13,6 +13,7 @@ import SwiftyJSON
 class MessageService {
     static let instance = MessageService()
     var channels = [Channel]()
+    
     func findAllChanels(completion: @escaping completionHandler) {
         Alamofire.request(URL_GET_CHANNELS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
             if response.result.error == nil {

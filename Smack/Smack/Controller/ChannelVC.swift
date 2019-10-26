@@ -21,6 +21,12 @@ class ChannelVC: UIViewController {
         setupUserInfo()
         ibTableView.delegate = self
         ibTableView.dataSource = self
+        
+        SocketService.instance.getChannel() { success in
+            if success {
+                self.ibTableView.reloadData()
+            }
+        }
     }
     
     
