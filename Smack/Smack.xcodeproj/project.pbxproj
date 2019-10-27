@@ -24,6 +24,7 @@
 		0ED3556F23472D1700D466DF /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED3556E23472D1700D466DF /* CircleImage.swift */; };
 		0ED355712347417D00D466DF /* ColorPlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED355702347417D00D466DF /* ColorPlaceholderTextField.swift */; };
 		0ED6CDE223658961005050FB /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6CDE123658961005050FB /* Message.swift */; };
+		0ED6CDE42365E694005050FB /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6CDE32365E694005050FB /* KeyboardBoundView.swift */; };
 		0EDEA94223605DAC00CEB6B1 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDEA94023605DAC00CEB6B1 /* ProfileVC.swift */; };
 		0EDEA94323605DAC00CEB6B1 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDEA94123605DAC00CEB6B1 /* ProfileVC.xib */; };
 		0EDFCCCD2361A224005B66C4 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDFCCCC2361A224005B66C4 /* MessageService.swift */; };
@@ -53,10 +54,11 @@
 		0ED3556623445DC500D466DF /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		0ED3556823459C7D00D466DF /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		0ED3556A2345F4C500D466DF /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
-		0ED3556C2345FD8C00D466DF /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
+		0ED3556C2345FD8C00D466DF /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AvatarCell.swift; path = ../AvatarCell.swift; sourceTree = "<group>"; };
 		0ED3556E23472D1700D466DF /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		0ED355702347417D00D466DF /* ColorPlaceholderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPlaceholderTextField.swift; sourceTree = "<group>"; };
 		0ED6CDE123658961005050FB /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		0ED6CDE32365E694005050FB /* KeyboardBoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = KeyboardBoundView.swift; path = Cells/KeyboardBoundView.swift; sourceTree = "<group>"; };
 		0EDEA94023605DAC00CEB6B1 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		0EDEA94123605DAC00CEB6B1 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		0EDFCCCC2361A224005B66C4 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
@@ -116,9 +118,9 @@
 				0EDFCCD2236204C5005B66C4 /* Cells */,
 				0EFD3B2C232F8AE4002A0C64 /* GradientView.swift */,
 				0ED3556623445DC500D466DF /* RoundedButton.swift */,
-				0ED3556C2345FD8C00D466DF /* AvatarCell.swift */,
 				0ED3556E23472D1700D466DF /* CircleImage.swift */,
 				0ED355702347417D00D466DF /* ColorPlaceholderTextField.swift */,
+				0ED6CDE32365E694005050FB /* KeyboardBoundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,6 +166,7 @@
 		0EDFCCD2236204C5005B66C4 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				0ED3556C2345FD8C00D466DF /* AvatarCell.swift */,
 				0EDFCCD3236204E1005B66C4 /* ChannelCell.swift */,
 			);
 			path = Cells;
@@ -346,6 +349,7 @@
 			files = (
 				0E119F15232E990500510F9B /* ChannelVC.swift in Sources */,
 				0ED3556B2345F4C500D466DF /* AvatarPickerVC.swift in Sources */,
+				0ED6CDE42365E694005050FB /* KeyboardBoundView.swift in Sources */,
 				0ED3556723445DC500D466DF /* RoundedButton.swift in Sources */,
 				0ED3556F23472D1700D466DF /* CircleImage.swift in Sources */,
 				0EDEA94223605DAC00CEB6B1 /* ProfileVC.swift in Sources */,
