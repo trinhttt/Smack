@@ -23,6 +23,7 @@
 		0ED3556D2345FD8C00D466DF /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED3556C2345FD8C00D466DF /* AvatarCell.swift */; };
 		0ED3556F23472D1700D466DF /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED3556E23472D1700D466DF /* CircleImage.swift */; };
 		0ED355712347417D00D466DF /* ColorPlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED355702347417D00D466DF /* ColorPlaceholderTextField.swift */; };
+		0ED6CDE223658961005050FB /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6CDE123658961005050FB /* Message.swift */; };
 		0EDEA94223605DAC00CEB6B1 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDEA94023605DAC00CEB6B1 /* ProfileVC.swift */; };
 		0EDEA94323605DAC00CEB6B1 /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDEA94123605DAC00CEB6B1 /* ProfileVC.xib */; };
 		0EDFCCCD2361A224005B66C4 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDFCCCC2361A224005B66C4 /* MessageService.swift */; };
@@ -55,6 +56,7 @@
 		0ED3556C2345FD8C00D466DF /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		0ED3556E23472D1700D466DF /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		0ED355702347417D00D466DF /* ColorPlaceholderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPlaceholderTextField.swift; sourceTree = "<group>"; };
+		0ED6CDE123658961005050FB /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		0EDEA94023605DAC00CEB6B1 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		0EDEA94123605DAC00CEB6B1 /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
 		0EDFCCCC2361A224005B66C4 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				0EDFCCCE2361A2B2005B66C4 /* Channel.swift */,
+				0ED6CDE123658961005050FB /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				0EBF39D02364042E007E1FDF /* SocketService.swift in Sources */,
 				0EFD3B2D232F8AE4002A0C64 /* GradientView.swift in Sources */,
 				0ED3556D2345FD8C00D466DF /* AvatarCell.swift in Sources */,
+				0ED6CDE223658961005050FB /* Message.swift in Sources */,
 				0EBF39CD23629C57007E1FDF /* AddChannelVC.swift in Sources */,
 				0EF4FAF4232D460B00BEE032 /* AppDelegate.swift in Sources */,
 				0E241C15232F260300FEA849 /* SWRevealViewController.m in Sources */,
