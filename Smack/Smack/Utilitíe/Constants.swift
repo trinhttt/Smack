@@ -45,3 +45,5 @@ let smackBluePlaceholder = #colorLiteral(red: 0.2, green: 0.7019607843, blue: 0.
 
 //Notification Constants
 let NOTIF_USER_DATA_DID_CHANGE = Notification.Name("notifUserDataChanged")
+let NOTIF_CHANNELS_LOADED = Notification.Name("channelsLoaded")
+let NOTIF_CHANNEL_SELECTED = Notification.Name("channelSelected")

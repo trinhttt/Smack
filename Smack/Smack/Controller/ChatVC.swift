@@ -10,6 +10,7 @@ import UIKit
 
 class ChatVC: UIViewController {
     @IBOutlet weak var ibMenuBtn: UIButton!
+    @IBOutlet weak var ibChannelName: UILabel!
     
     
     override func viewDidLoad() {
@@ -27,8 +28,34 @@ class ChatVC: UIViewController {
             })
         }
         
+        NotificationCenter.default.addObserver(self, selector: #selector(userDataChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(channelSelected(_:)), name: NOTIF_CHANNEL_SELECTED, object: nil)
+        
+    }
+    
+    @objc func userDataChange(_ notif: Notification) {
+        if AuthService.instance.isLoggedIn {
+            onLoginGetMessages()
+        } else {
+            ibChannelName.text = "Please login"
+        }
+    }
+    
+    @objc func channelSelected(_ notif: Notification) {
+        updateWithChannel()
+    }
+    
+    func updateWithChannel() {
+        if let channelName = MessageService.instance.selectedChannel?.channelTitle {
+            ibChannelName.text = "#\(channelName)"
+        }
+    }
+    
+    func onLoginGetMessages() {
         MessageService.instance.findAllChanels { (success) in
-            
+            if success {
+            }
         }
     }
 
