@@ -9,17 +9,23 @@
 import UIKit
 
 class ChatVC: UIViewController {
+    
+    // MARK: - Outlets
     @IBOutlet weak var ibMenuBtn: UIButton!
     @IBOutlet weak var ibChannelName: UILabel!
     @IBOutlet weak var ibMessageTextBox: UITextField!
     @IBOutlet weak var ibTableView: UITableView!
+    @IBOutlet weak var ibSendButton: UIButton!
     
+    //MARK: - Variables
+    var isTyping: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.bindToKeyboard()
         ibTableView.delegate = self
         ibTableView.dataSource = self
+        ibSendButton.isHidden = true
 //        ibTableView.rowHeight = UITableView.automaticDimension
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         view.addGestureRecognizer(tap)
@@ -36,6 +42,16 @@ class ChatVC: UIViewController {
             })
         }
         
+        SocketService.instance.getChatMessage { (success) in
+            if success {
+                self.ibTableView.reloadData()
+                
+                //scroll to bottom
+                let endIndex = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
+                self.ibTableView.scrollToRow(at: endIndex, at: .bottom, animated: false)
+            }
+        }
+        
         NotificationCenter.default.addObserver(self, selector: #selector(userDataChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(channelSelected(_:)), name: NOTIF_CHANNEL_SELECTED, object: nil)
@@ -47,6 +63,7 @@ class ChatVC: UIViewController {
             onLoginGetMessages()
         } else {
             ibChannelName.text = "Please login"
+            ibTableView.reloadData()
         }
     }
     
@@ -84,6 +101,19 @@ class ChatVC: UIViewController {
             }
         }
     }
+    
+    @IBAction func ibMessBoxEditing(_ sender: Any) {
+        if ibMessageTextBox.text == "" {
+            isTyping = false
+            ibSendButton.isHidden = true
+        } else {
+            if isTyping == false {
+                ibSendButton.isHidden = false
+            }
+            isTyping = true
+        }
+    }
+    
     
     @IBAction func sendMessageTapped(_ sender: Any) {
         if AuthService.instance.isLoggedIn {

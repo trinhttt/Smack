@@ -71,6 +71,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="ibMessBoxEditing:" destination="Bdq-FL-To3" eventType="editingChanged" id="DQD-tX-a3I"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HZM-Cn-p0x">
                                 <rect key="frame" x="376" y="825" width="30" height="30"/>
@@ -90,7 +93,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M1g-c4-GgO">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M1g-c4-GgO" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="10" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="50" id="0Gi-eW-frf"/>
@@ -160,6 +163,7 @@
                         <outlet property="ibChannelName" destination="pzI-dO-Src" id="xH9-qF-Fr8"/>
                         <outlet property="ibMenuBtn" destination="PVA-KN-DZN" id="nKt-f5-cal"/>
                         <outlet property="ibMessageTextBox" destination="NPW-jR-HXF" id="tQs-Az-5Wm"/>
+                        <outlet property="ibSendButton" destination="HZM-Cn-p0x" id="Th9-mt-9sa"/>
                         <outlet property="ibTableView" destination="5Lq-Xl-DBg" id="adS-Ya-VKM"/>
                     </connections>
                 </viewController>
