@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E0439CA23668C9000857749 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0439C923668C9000857749 /* MessageCell.swift */; };
 		0E119F13232E98F400510F9B /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E119F12232E98F400510F9B /* ChatVC.swift */; };
 		0E119F15232E990500510F9B /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E119F14232E990500510F9B /* ChannelVC.swift */; };
 		0E241C15232F260300FEA849 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E241C14232F260300FEA849 /* SWRevealViewController.m */; };
@@ -39,6 +40,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E0439C923668C9000857749 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		0E119F12232E98F400510F9B /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		0E119F14232E990500510F9B /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		0E241C12232F260200FEA849 /* Smack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smack-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			children = (
 				0ED3556C2345FD8C00D466DF /* AvatarCell.swift */,
 				0EDFCCD3236204E1005B66C4 /* ChannelCell.swift */,
+				0E0439C923668C9000857749 /* MessageCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				0E2D1AC42335CA7C00DF82C2 /* LoginVC.swift in Sources */,
 				0EBF39D02364042E007E1FDF /* SocketService.swift in Sources */,
 				0EFD3B2D232F8AE4002A0C64 /* GradientView.swift in Sources */,
+				0E0439CA23668C9000857749 /* MessageCell.swift in Sources */,
 				0ED3556D2345FD8C00D466DF /* AvatarCell.swift in Sources */,
 				0ED6CDE223658961005050FB /* Message.swift in Sources */,
 				0EBF39CD23629C57007E1FDF /* AddChannelVC.swift in Sources */,
