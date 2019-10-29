@@ -35,12 +35,12 @@ class LoginVC: UIViewController {
         }
         
         AuthService.instance.loginUser(email: email, password: password) { (success) in
+            self.ibSpinner.isHidden = true
+            self.ibSpinner.stopAnimating()
             if success {
                 AuthService.instance.findUserByEmail(completion: { (findSuccess) in
                     if findSuccess{
                         NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
-                        self.ibSpinner.isHidden = true
-                        self.ibSpinner.stopAnimating()
                         self.dismiss(animated: true, completion: nil)
                         
                     }
