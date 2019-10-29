@@ -169,7 +169,6 @@ class ChatVC: UIViewController {
     @objc func handleTap() {
         view.endEditing(true)
     }
-
 }
 
 extension ChatVC: UITableViewDelegate, UITableViewDataSource {

@@ -73,5 +73,4 @@ class SocketService: NSObject {
             completion(tyingUsers)
         }
     }
-    
 }

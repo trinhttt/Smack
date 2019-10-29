@@ -75,7 +75,5 @@ extension AvatarPickerVC: UICollectionViewDelegate, UICollectionViewDataSource, 
         let size = (collectionView.bounds.size.width - padding - (numberOfColumns - 1) * spacingBetweenCells) / numberOfColumns
         
         return CGSize(width: size, height: size)
-    }
-    
-    
+    } 
 }
