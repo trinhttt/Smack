@@ -44,13 +44,17 @@ class ChatVC: UIViewController {
             })
         }
         
-        SocketService.instance.getChatMessage { (success) in
-            if success {
+        SocketService.instance.getChatMessage { (newMessage) in
+            
+            if newMessage.channelId == MessageService.instance.selectedChannel?.id && AuthService.instance.isLoggedIn {
+                
+                MessageService.instance.messages.append(newMessage)
                 self.ibTableView.reloadData()
                 
                 //scroll to bottom
                 let endIndex = IndexPath(row: MessageService.instance.messages.count - 1, section: 0)
                 self.ibTableView.scrollToRow(at: endIndex, at: .bottom, animated: false)
+            } else {
             }
         }
         
