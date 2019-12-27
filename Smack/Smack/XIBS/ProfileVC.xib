@@ -28,18 +28,18 @@
                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWy-pF-ikd">
-                    <rect key="frame" x="50" y="263" width="314" height="370"/>
+                    <rect key="frame" x="35" y="263" width="344" height="370"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12S-mT-OzB">
-                            <rect key="frame" x="276" y="10" width="28" height="28"/>
+                            <rect key="frame" x="306" y="10" width="28" height="28"/>
                             <state key="normal" image="closeButton"/>
                             <connections>
                                 <action selector="ibCloseTapped:" destination="-1" eventType="touchUpInside" id="b4U-JA-6IS"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xy3-3U-hUW" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
-                            <rect key="frame" x="15" y="320" width="284" height="40"/>
-                            <color key="backgroundColor" red="0.1270601455479452" green="0.57783069349315064" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <rect key="frame" x="15" y="320" width="314" height="40"/>
+                            <color key="backgroundColor" red="0.1270601455" green="0.70489083900000005" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="98C-F8-7u5"/>
                             </constraints>
@@ -52,7 +52,7 @@
                             </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="sKy-NH-b68">
-                            <rect key="frame" x="110" y="30" width="94" height="180.5"/>
+                            <rect key="frame" x="125" y="30" width="94" height="180.5"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6g-dz-iYv">
                                     <rect key="frame" x="0.0" y="0.0" width="94" height="26.5"/>
@@ -82,7 +82,7 @@
                             </subviews>
                         </stackView>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eu5-fq-Wnc">
-                            <rect key="frame" x="15" y="230.5" width="176" height="40"/>
+                            <rect key="frame" x="15" y="230.5" width="206" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="unl-YO-jhT"/>
                             </constraints>
@@ -90,7 +90,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYp-lZ-Ily" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
-                            <rect key="frame" x="199" y="230.5" width="100" height="40"/>
+                            <rect key="frame" x="229" y="230.5" width="100" height="40"/>
                             <color key="backgroundColor" red="0.1270601455479452" green="0.70489083904109584" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="100" id="Yo7-8W-mOp"/>
@@ -129,10 +129,10 @@
                 <constraint firstItem="ijp-e8-oua" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6jd-e3-gHd"/>
                 <constraint firstItem="ijp-e8-oua" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="DRX-Gz-ovd"/>
                 <constraint firstItem="ijp-e8-oua" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LRz-7y-BFp"/>
-                <constraint firstItem="zWy-pF-ikd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="50" id="PtA-ly-ql9"/>
+                <constraint firstItem="zWy-pF-ikd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="PtA-ly-ql9"/>
                 <constraint firstAttribute="bottom" secondItem="ijp-e8-oua" secondAttribute="bottom" id="o1I-hU-1Op"/>
                 <constraint firstItem="zWy-pF-ikd" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="sLd-yl-Kbn"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zWy-pF-ikd" secondAttribute="trailing" constant="50" id="tBv-no-t2i"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zWy-pF-ikd" secondAttribute="trailing" constant="35" id="tBv-no-t2i"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-51" y="93"/>

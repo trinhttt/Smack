@@ -121,11 +121,16 @@ class AuthService {
                         self.authToken = json["token"].stringValue
                     } catch {
                         print(error)
+                        completion(false)
                     }
                 }
-                self.isLoggedIn = true
-                completion(true)
-
+                if self.userEmail != "" && self.authToken != "" {
+                    self.isLoggedIn = true
+                    completion(true)
+                } else {
+                    self.isLoggedIn = false
+                    completion(false)
+                }
             } else {
                 completion(false)
             }
