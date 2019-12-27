@@ -35,7 +35,7 @@ class MessageCell: UITableViewCell {
     
     func convertDate(isoDate: String) -> String {
         //2019-10-27T16:44:07.809Z
-        let endIndex = isoDate.index(isoDate.endIndex, offsetBy: -5)//con tro: tu cuoi qua 5 ky tu
+        let endIndex = isoDate.index(isoDate.endIndex, offsetBy: -5)//con tro tu cuoi qua 5 ky tu
         let date = isoDate[..<endIndex] //2019-10-27T16:44:07.809Z
         
         let isoFormatter = ISO8601DateFormatter()

@@ -17,8 +17,9 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        // Do any additional setup after loading the view.
+        self.hideKeyboardWhenTappedAround()
     }
+    
     @IBAction func ibClosePressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -31,6 +32,7 @@ class LoginVC: UIViewController {
         ibSpinner.isHidden = false
         ibSpinner.startAnimating()
         guard let email = ibUsername.text, let password = ibPassword.text else {
+            self.showAlert(mess: "Please fill in your information")
             return
         }
         
@@ -48,7 +50,6 @@ class LoginVC: UIViewController {
             } else {
                 let alert = UIAlertController(title: "Error", message: "The email or password is incorrect", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-
                 self.present(alert, animated: true, completion: nil)
             }
         }

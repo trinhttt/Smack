@@ -28,7 +28,9 @@ class ChatVC: UIViewController {
         ibTableView.dataSource = self
         ibSendButton.isHidden = true
         self.ibTypingLabel.text = ""
-//        ibTableView.rowHeight = UITableView.automaticDimension
+        if !AuthService.instance.isLoggedIn {
+             ibChannelName.text = "Please login"
+        }
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
         view.addGestureRecognizer(tap)
         self.ibMenuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
@@ -106,7 +108,7 @@ class ChatVC: UIViewController {
     
     func updateWithChannel() {
         if let channelName = MessageService.instance.selectedChannel?.channelTitle {
-            ibChannelName.text = "#\(channelName)"
+            ibChannelName.text = "#\(channelName) channel"
         } else {
             ibChannelName.text = ""
         }

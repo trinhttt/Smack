@@ -14,6 +14,7 @@
 		0E2D1AC2233537CB00DF82C2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2D1AC1233537CB00DF82C2 /* Constants.swift */; };
 		0E2D1AC42335CA7C00DF82C2 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2D1AC32335CA7C00DF82C2 /* LoginVC.swift */; };
 		0E2D1AC62335D79800DF82C2 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2D1AC52335D79800DF82C2 /* CreateAccountVC.swift */; };
+		0E5717FB23B60856007EE8C4 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5717FA23B60856007EE8C4 /* UIViewController+Extension.swift */; };
 		0EBF39CD23629C57007E1FDF /* AddChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF39CB23629C57007E1FDF /* AddChannelVC.swift */; };
 		0EBF39CE23629C57007E1FDF /* AddChannelVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EBF39CC23629C57007E1FDF /* AddChannelVC.xib */; };
 		0EBF39D02364042E007E1FDF /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBF39CF2364042E007E1FDF /* SocketService.swift */; };
@@ -49,6 +50,7 @@
 		0E2D1AC1233537CB00DF82C2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0E2D1AC32335CA7C00DF82C2 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0E2D1AC52335D79800DF82C2 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		0E5717FA23B60856007EE8C4 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		0EBF39CB23629C57007E1FDF /* AddChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelVC.swift; sourceTree = "<group>"; };
 		0EBF39CC23629C57007E1FDF /* AddChannelVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelVC.xib; sourceTree = "<group>"; };
 		0EBF39CF2364042E007E1FDF /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
@@ -145,6 +147,14 @@
 			path = "Utilitíe";
 			sourceTree = "<group>";
 		};
+		0E5717F923B6081B007EE8C4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0E5717FA23B60856007EE8C4 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		0ED3556323439CCD00D466DF /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +206,7 @@
 		0EF4FAF2232D460B00BEE032 /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				0E5717F923B6081B007EE8C4 /* Extensions */,
 				0EDEA94423605DB200CEB6B1 /* XIBS */,
 				0ED3556323439CCD00D466DF /* Services */,
 				0E2D1AC02335377E00DF82C2 /* Utilities */,
@@ -356,6 +367,7 @@
 				0ED3556723445DC500D466DF /* RoundedButton.swift in Sources */,
 				0ED3556F23472D1700D466DF /* CircleImage.swift in Sources */,
 				0EDEA94223605DAC00CEB6B1 /* ProfileVC.swift in Sources */,
+				0E5717FB23B60856007EE8C4 /* UIViewController+Extension.swift in Sources */,
 				0E119F13232E98F400510F9B /* ChatVC.swift in Sources */,
 				0EDFCCCD2361A224005B66C4 /* MessageService.swift in Sources */,
 				0EDFCCCF2361A2B2005B66C4 /* Channel.swift in Sources */,

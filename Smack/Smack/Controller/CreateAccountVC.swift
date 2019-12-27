@@ -16,8 +16,8 @@ class CreateAccountVC: UIViewController {
     @IBOutlet weak var ibEmailTxt: UITextField!
     @IBOutlet weak var ibPasswordTxt: UITextField!
     @IBOutlet weak var ibAvatarImg: UIImageView!
-    
     @IBOutlet weak var ibSpinner: UIActivityIndicatorView!
+    
     // Variables
     var avatarName = "profileDefault"
     var avatarColor = "[0.5, 0.5, 0.5, 1]"
@@ -34,6 +34,7 @@ class CreateAccountVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -47,19 +48,22 @@ class CreateAccountVC: UIViewController {
     }
     
     @IBAction func ibCreateAccountTapped(_ sender: Any) {
-        ibSpinner.isHidden = false
-        ibSpinner.startAnimating()
-        
         guard let name = ibUsernameTxt.text, ibUsernameTxt.text != "" else {
+            showAlert(mess: "Please enter your name")
             return
         }
         guard let email = ibEmailTxt.text, ibEmailTxt.text != "" else {
+            showAlert(mess: "Please enter your email")
             return
         }
         guard let password = ibPasswordTxt.text, ibPasswordTxt.text != "" else {
+            showAlert(mess: "Please enter your password")
             return
         }
         
+        ibSpinner.isHidden = false
+        ibSpinner.startAnimating()
+
         AuthService.instance.registerUser(email: email, password: password) { (success) in
             if success {
                 print("registered user")
@@ -78,10 +82,16 @@ class CreateAccountVC: UIViewController {
                         })
                     } else {
                         print("log in fail")
+                        self.ibSpinner.isHidden = true
+                        self.ibSpinner.stopAnimating()
+                        self.showAlert(mess: "Login fail")
                     }
                 })
             } else{
                 print("register user fail")
+                self.ibSpinner.isHidden = true
+                self.ibSpinner.stopAnimating()
+                self.showAlert(mess: "Register user fail")
             }
         }
     }

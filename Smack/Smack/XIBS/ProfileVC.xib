@@ -28,7 +28,7 @@
                     <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWy-pF-ikd">
-                    <rect key="frame" x="35" y="263" width="344" height="370"/>
+                    <rect key="frame" x="35" y="203" width="344" height="370"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12S-mT-OzB">
                             <rect key="frame" x="306" y="10" width="28" height="28"/>
@@ -131,7 +131,7 @@
                 <constraint firstItem="ijp-e8-oua" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LRz-7y-BFp"/>
                 <constraint firstItem="zWy-pF-ikd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="PtA-ly-ql9"/>
                 <constraint firstAttribute="bottom" secondItem="ijp-e8-oua" secondAttribute="bottom" id="o1I-hU-1Op"/>
-                <constraint firstItem="zWy-pF-ikd" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="sLd-yl-Kbn"/>
+                <constraint firstItem="zWy-pF-ikd" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-60" id="sLd-yl-Kbn"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="zWy-pF-ikd" secondAttribute="trailing" constant="35" id="tBv-no-t2i"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

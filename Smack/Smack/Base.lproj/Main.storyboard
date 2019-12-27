@@ -39,15 +39,16 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="77"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smack Chat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzI-dO-Src">
-                                        <rect key="frame" x="153.5" y="38.5" width="107.5" height="23"/>
+                                        <rect key="frame" x="153.5" y="39.5" width="107.5" height="23"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVA-KN-DZN">
-                                        <rect key="frame" x="12" y="35" width="40" height="30"/>
+                                        <rect key="frame" x="15" y="37" width="35" height="28"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="5ac-2M-bCD"/>
+                                            <constraint firstAttribute="height" constant="28" id="5ac-2M-bCD"/>
+                                            <constraint firstAttribute="width" constant="35" id="bmf-Gp-9me"/>
                                         </constraints>
                                         <state key="normal" image="smackBurger"/>
                                     </button>
@@ -58,7 +59,7 @@
                                     <constraint firstItem="pzI-dO-Src" firstAttribute="centerY" secondItem="PVA-KN-DZN" secondAttribute="centerY" id="aeQ-QW-tYP"/>
                                     <constraint firstAttribute="bottom" secondItem="PVA-KN-DZN" secondAttribute="bottom" constant="12" id="czW-Jb-i2J"/>
                                     <constraint firstItem="pzI-dO-Src" firstAttribute="centerX" secondItem="JDg-tJ-OD9" secondAttribute="centerX" id="iR7-Ss-lCD"/>
-                                    <constraint firstItem="PVA-KN-DZN" firstAttribute="leading" secondItem="JDg-tJ-OD9" secondAttribute="leading" constant="12" id="kfh-Uc-UTs"/>
+                                    <constraint firstItem="PVA-KN-DZN" firstAttribute="leading" secondItem="JDg-tJ-OD9" secondAttribute="leading" constant="15" id="kfh-Uc-UTs"/>
                                 </constraints>
                             </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NPW-jR-HXF">
@@ -459,7 +460,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDs-uz-aOo" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
-                                <rect key="frame" x="50" y="773" width="314" height="44"/>
+                                <rect key="frame" x="45" y="773" width="324" height="44"/>
                                 <color key="backgroundColor" red="0.1667533517" green="0.72160744669999999" blue="0.96316140890000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="5L7-7e-M7G"/>
@@ -573,10 +574,10 @@
                             <constraint firstItem="3gG-is-Z7N" firstAttribute="centerX" secondItem="x1c-a2-Sz4" secondAttribute="centerX" id="2B4-Ry-Qiz"/>
                             <constraint firstItem="cKy-nj-tZG" firstAttribute="top" secondItem="aie-rN-fqT" secondAttribute="bottom" constant="20" id="2nL-n0-RXY"/>
                             <constraint firstItem="oxH-vD-L8e" firstAttribute="centerY" secondItem="6zC-dt-iiD" secondAttribute="centerY" constant="-100" id="9xD-qR-dk0"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uDs-uz-aOo" secondAttribute="trailing" constant="30" id="EJI-ng-73H"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uDs-uz-aOo" secondAttribute="trailing" constant="25" id="EJI-ng-73H"/>
                             <constraint firstItem="zCp-uX-dse" firstAttribute="top" secondItem="x1c-a2-Sz4" secondAttribute="top" constant="60" id="EZ0-Jm-Ner"/>
                             <constraint firstAttribute="trailing" secondItem="3gG-is-Z7N" secondAttribute="trailing" constant="40" id="M1b-YY-oFL"/>
-                            <constraint firstItem="uDs-uz-aOo" firstAttribute="leading" secondItem="6zC-dt-iiD" secondAttribute="leadingMargin" constant="30" id="Nhn-Wu-kBm"/>
+                            <constraint firstItem="uDs-uz-aOo" firstAttribute="leading" secondItem="6zC-dt-iiD" secondAttribute="leadingMargin" constant="25" id="Nhn-Wu-kBm"/>
                             <constraint firstItem="x1c-a2-Sz4" firstAttribute="trailing" secondItem="FIw-ia-ZGW" secondAttribute="trailing" constant="25" id="RI4-Tn-Ye6"/>
                             <constraint firstItem="aie-rN-fqT" firstAttribute="centerX" secondItem="6zC-dt-iiD" secondAttribute="centerX" id="UUo-XX-WWF"/>
                             <constraint firstItem="uDs-uz-aOo" firstAttribute="centerX" secondItem="6zC-dt-iiD" secondAttribute="centerX" id="Usz-F3-1C2"/>
